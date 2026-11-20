@@ -1,0 +1,408 @@
+
+
+/* تنسيق عام للموقع */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: Tahoma, Arial, sans-serif;
+background: #f0f7fa;
+color: #263746;
+direction: rtl;
+line-height: 1.8;
+}
+
+/* القائمة العلوية */
+header {
+background: #087e8b;
+padding: 18px 5%;
+box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+}
+
+nav {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+gap: 25px;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+font-size: 17px;
+font-weight: bold;
+transition: 0.3s;
+}
+
+nav a:hover {
+color: #b8f3f0;
+}
+
+/* الصفحات الداخلية */
+.department-page {
+width: 92%;
+max-width: 1200px;
+margin: 40px auto;
+}
+
+/* الأزرار */
+.btn {
+display: inline-block;
+background: #087e8b;
+color: white;
+padding: 12px 25px;
+border: none;
+border-radius: 10px;
+text-decoration: none;
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+transition: 0.3s;
+margin: 10px 0;
+}
+
+.btn:hover {
+background: #055d68;
+transform: translateY(-2px);
+}
+
+/* محتوى القسم */
+.department-content {
+background: white;
+padding: 35px;
+margin-top: 20px;
+border-radius: 20px;
+box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+}
+
+/* عنوان القسم */
+.department-content h1 {
+color: #087e8b;
+text-align: center;
+font-size: 35px;
+margin-bottom: 20px;
+}
+
+.department-content h2 {
+color: #087e8b;
+font-size: 24px;
+margin-top: 30px;
+margin-bottom: 15px;
+border-right: 5px solid #12b8a6;
+padding-right: 12px;
+}
+
+/* صورة القسم */
+#departmentImage {
+display: block;
+width: 100%;
+height: 350px;
+object-fit: cover;
+border-radius: 18px;
+margin: 25px auto;
+box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+}
+
+/* وصف القسم */
+#departmentDescription {
+font-size: 19px;
+color: #52616b;
+text-align: center;
+padding: 15px;
+background: #eaf7f8;
+border-radius: 12px;
+margin: 20px 0;
+}
+/* بطاقات الأمراض والأدوية */
+#conditionsContainer,
+#medicinesContainer {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 18px;
+margin: 20px 0;
+}
+
+.department-card {
+background: #e9f6f8;
+padding: 22px;
+border-radius: 15px;
+border: 1px solid #c9e9ed;
+font-size: 17px;
+color: #294b55;
+transition: 0.3s;
+box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.department-card:hover {
+transform: translateY(-5px);
+background: #d9f1f2;
+box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* زر الحجز */
+#bookingButton {
+display: block;
+margin: 35px auto;
+padding: 15px 40px;
+font-size: 19px;
+}
+
+/* نموذج الحجز */
+#bookingFormContainer {
+margin-top: 25px;
+}
+
+#bookingFormContainer form {
+background: #f4fafb;
+padding: 25px;
+border-radius: 15px;
+border: 1px solid #c9e9ed;
+}
+
+#bookingFormContainer h2 {
+text-align: center;
+}
+
+#bookingFormContainer label {
+display: block;
+margin-top: 15px;
+font-weight: bold;
+color: #087e8b;
+}
+
+#bookingFormContainer input {
+display: block;
+width: 100%;
+padding: 13px;
+margin-top: 7px;
+border: 1px solid #b8d6dc;
+border-radius: 9px;
+font-size: 16px;
+font-family: inherit;
+outline: none;
+}
+
+#bookingFormContainer input:focus {
+border-color: #087e8b;
+box-shadow: 0 0 5px rgba(8,126,139,0.2);
+}
+
+/* نتيجة الحجز */
+#bookingResult {
+margin-top: 20px;
+color: #176b54;
+}
+
+#bookingResult .department-card {
+background: #e4f8ed;
+border-color: #a9dfbd;
+}
+
+/* تنسيق الصفحة الرئيسية */
+.logo {
+color: white;
+font-size: 25px;
+font-weight: bold;
+}
+
+.hero {
+min-height: 450px;
+background: linear-gradient(rgba(0,80,90,0.7), rgba(0,80,90,0.7)),
+url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=1400");
+background-size: cover;
+background-position: center;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: white;
+padding: 30px;
+}.hero-content h1 {
+font-size: 42px;
+margin-bottom: 15px;
+}
+
+.hero-content p {
+font-size: 20px;
+}
+
+.about,
+.departments,
+.contact {
+padding: 55px 5%;
+text-align: center;
+}
+
+.about h2,
+.departments h2,
+.contact h2 {
+color: #087e8b;
+font-size: 30px;
+margin-bottom: 20px;
+}
+
+.section-description {
+color: #647782;
+margin-bottom: 25px;
+}
+
+.departments-container {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+margin-top: 30px;
+}
+
+.departments-container .department-card {
+background: white;
+padding: 0;
+overflow: hidden;
+text-align: center;
+}
+
+.departments-container .department-card img {
+width: 100%;
+height: 210px;
+object-fit: cover;
+}
+
+.departments-container .department-card h3 {
+color: #087e8b;
+padding: 12px;
+}
+
+.departments-container .department-card p {
+padding: 0 15px 15px;
+}
+
+.department-button {
+display: inline-block;
+background: #087e8b;
+color: white;
+padding: 10px 25px;
+border-radius: 8px;
+text-decoration: none;
+margin: 10px;
+}
+
+/* البحث */
+#searchInput {
+width: 80%;
+max-width: 500px;
+padding: 14px;
+border: 1px solid #b8d6dc;
+border-radius: 10px;
+font-size: 16px;
+margin: 20px;
+}
+
+/* التواصل */
+.contact {
+background: #e5f4f6;
+}
+
+/* نهاية الموقع */
+footer {
+background: #075765;
+color: white;
+text-align: center;
+padding: 25px;
+}
+
+/* زر أعلى الصفحة */
+#topButton {
+position: fixed;
+bottom: 20px;
+left: 20px;
+background: #087e8b;
+color: white;
+border: none;
+padding: 12px 18px;
+border-radius: 50%;
+cursor: pointer;
+font-size: 20px;
+}
+
+/* التوافق مع التابلت */
+@media (max-width: 900px) {
+.departments-container {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.department-content {
+padding: 25px;
+}
+}
+
+/* التوافق مع الموبايل */
+@media (max-width: 600px) {
+header {
+padding: 15px 10px;
+}
+nav {
+gap: 12px;
+}
+
+nav a {
+font-size: 14px;
+}
+
+.department-page {
+width: 95%;
+margin: 20px auto;
+}
+
+.department-content {
+padding: 15px;
+}
+
+.department-content h1 {
+font-size: 27px;
+}
+
+.department-content h2 {
+font-size: 20px;
+}
+
+#departmentImage {
+height: 220px;
+}
+
+#departmentDescription {
+font-size: 16px;
+}
+
+#conditionsContainer,
+#medicinesContainer {
+grid-template-columns: 1fr;
+}
+
+.departments-container {
+grid-template-columns: 1fr;
+}
+
+.hero-content h1 {
+font-size: 28px;
+}
+
+.hero-content p {
+font-size: 16px;
+}
+
+#searchInput {
+width: 95%;
+margin: 15px 0;
+}
+
+#bookingButton {
+width: 100%;
+font-size: 17px;
+}
+}
+
+
+
